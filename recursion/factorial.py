@@ -9,7 +9,7 @@ def factorial(n):
     else:
         return factorial(n-1) + math.log(n)
     
-N = 3
+N = 9
 print (factorial(N))
 
 # take the sum of log N value 

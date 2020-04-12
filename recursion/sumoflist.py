@@ -8,5 +8,5 @@ def recurse_list_sum( data_list ):
     
     return total
 
-arr = [1, 2, [3,4],[5,6]]
+arr = [[8, 4], [90, -1, 3], [9, 62], [-7, -1, -56, -6], [201], [76, 18]]
 print(recurse_list_sum(arr))
