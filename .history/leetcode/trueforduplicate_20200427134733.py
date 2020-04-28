@@ -23,7 +23,7 @@ def containsDuplicate(self, nums=[]):
         return False
 
 nums = [2,3,4,5,6,7,8]
-nums2 = [1,1,1,3,3,4,3,2,4,2]
+nums2 = [2,3,4,5,6,7,8, 2,3,4,5,6,7,8]
 
 print(containsDuplicate(nums))
 print(containsDuplicate(nums2))
