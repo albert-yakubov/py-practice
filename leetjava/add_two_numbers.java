@@ -1,43 +1,49 @@
-class MyQueue {
-    
-    // initialize stack
-    Stack stack;
-    // initialize counter
-    int start = 0;
-
-    /** Initialize your data structure here. */
-    public MyQueue() {
-        
-        // instanciate stack
-        stack = new Stack<Integer>();
-    }
-    
-    /** Push element x to the back of queue. */
-    public void push(int x) {
-        stack.push(x);
-    }
-    
-    /** Removes the element from in front of queue and returns that element. */
-    public int pop() {
-        return (int)stack.get(start++);
-    }
-    
-    /** Get the front element. */
-    public int peek() {
-        return (int)stack.get(start);
-    }
-    
-    /** Returns whether the queue is empty. */
-    public boolean empty() {
-        return stack.size() == start + 1 ? false:true;
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        // declare a third list node
+        ListNode new_list = new ListNode(0);
+        ListNode l3 = new_list;
+        // declare carry just like in python
+        int carry = 0;
+        // then loop through the values in the nodes and declare them:
+        while(l1!=null || l2!=null){
+            int x =(l1!=null)?l1.val:0;
+            int y =(l2!=null)?l2.val:0;
+            int sum = x + y + carry; 
+            
+            // avoid any values with 0:
+            carry = sum/10;
+            int last_digit = sum%10;
+            // create a temp list node to to store the new values:
+            ListNode temp = new ListNode(last_digit);
+            // connect the temp node with new node created earlier:
+            l3.next = temp;
+            l3 = l3.next;
+            // then add the rest of the values to the new list
+            if(l1!=null)
+                l1 = l1.next;
+            if(l2!=null)
+                l2 = l2.next;
+            
+        }
+        if(carry >0){
+            ListNode temp = new ListNode(carry);
+            l3.next = temp;
+            // i guess we always have to leave the next value(possibility) open:
+            l3 = l3.next;
+            
+        }
+        return new_list.next;
+            
     }
 }
-
-/**
- * Your MyQueue object will be instantiated and called as such:
- * MyQueue obj = new MyQueue();
- * obj.push(x);
- * int param_2 = obj.pop();
- * int param_3 = obj.peek();
- * boolean param_4 = obj.empty();
- */
