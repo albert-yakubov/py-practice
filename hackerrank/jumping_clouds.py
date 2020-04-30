@@ -1,0 +1,2 @@
+stack = []
+print(dir(stack))
