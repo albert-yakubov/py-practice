@@ -3,13 +3,13 @@ class Solution:
         sp =0
         pp = 0
 
-        while pp < len(p):
-
-            if s[sp != p[pp]]:
-                return False
-            else:
-                sp += 1
-                pp += 1
+        while pp < len(p) and pp < len(s):
+            if s[sp].isalpha() and p[pp].isalpha():
+                if s[sp != p[pp]]:
+                    return False
+                else:
+                    sp += 1
+                    pp += 1
             if p[pp] == '?':
                 sp += 1
                 pp += 1
@@ -27,4 +27,4 @@ class Solution:
                     return False
                 sp += 1
                 pp += 1
-        return True 
+        return sp == len(s) + 1 
