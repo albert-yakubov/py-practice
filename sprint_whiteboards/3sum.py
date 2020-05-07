@@ -3,12 +3,14 @@ def threeNumberSum(arr, target):
     ans = {} # use the keys of the dict to store answers: prevents duplicates
     arr = sorted(arr) # sorted array allows us to make certain assumptions
     for i, a in enumerate(arr): # fix a := nums[i] in outermost iteration loop
-        # j is the left pointer, k is the right pointer
+        # j is the left pointer 
+        # k is the right pointer
         j, k = i+1, len(arr)-1
-        while j < k: # while there is no overlap/collision of pointers
+        # while there is no overlap/collision of pointers
+        while j < k: 
             # b := nums[j] is the next smallest number after a := nums[i]
-            # c := nums[k] is the largest number
             b = arr[j]
+            # c := nums[k] is the largest number
             c = arr[k]
             if a+b+c == target: # found a solution
             # sort the answer so ordering doesn't matter: identifies duplicates

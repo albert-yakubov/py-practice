@@ -68,7 +68,7 @@ def removeKthLinkedListNode(head, k):
         # If count of nodes in the  
         # given list is less than 'n' 
         if(second.next == None): 
-                  
+                # >>>>> going right
             # If index = n then  
             # delete the head node 
             
@@ -76,7 +76,7 @@ def removeKthLinkedListNode(head, k):
                 head = head.next
             return head 
         
-        second= second.next
+        second = second.next
           
     while(second.next != None): 
         second = second.next
