@@ -11,7 +11,7 @@ import sys
 def rotate_an_array(arr, d, n):
     # d is ammount of rotations
     # a is array
-    # n are the numbers
+    # n are the numbers starting rotation from
     
     # Function to left rotate arr[] of size n by d*/ 
     for i in range(d):
@@ -24,17 +24,10 @@ def left_rotate_by_one(arr, n):
     arr[n-1] = temp 
 def printArray(arr, size): 
     for i in range(size): 
-        print ("%d"%arr[i], end =" ") 
-     
-if __name__ == '__main__':
-    nd = input().split()
+        print("%d"%arr[i], end =" ")
 
-    n = int(nd[0])
-
-    d = int(nd[1])
-
-    arr = list(map(int, input().rstrip().split()))
-# utility function to print an array */ 
-
-    rotate_an_array(arr, d, n) 
-    printArray(arr, n) 
+arr = [1, 2, 3, 4, 5]
+d = 2
+n = 5
+print(rotate_an_array(arr, d, n))
+print(arr)
