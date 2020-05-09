@@ -7,6 +7,7 @@ def twoArrays(k, A, B):
             return "NO"
 
     return "YES"
+
 k = 1
 A = [1, 2, 2, 1]
 B = [3, 3, 3, 4]
