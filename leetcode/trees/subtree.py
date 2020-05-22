@@ -84,6 +84,7 @@ S.left.right = Node(30)
 if isSubtree(T, S):
     print
     "Tree 2 is subtree of Tree 1"
+
 else:
     print
     "Tree 2 is not a subtree of Tree 1"
