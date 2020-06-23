@@ -5,6 +5,8 @@ import os
 import random
 import re
 import sys
+import this
+
 
 class SinglyLinkedListNode:
     def __init__(self, node_data):
