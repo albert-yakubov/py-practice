@@ -26,10 +26,10 @@ class Solution:
                 if target >= num:
                     ways += depth_first_searh(target - num)
             dictionary[target] = ways
-            print(dictionary)
+            #print(dictionary)
             return ways
-        print(dictionary)
-        print(depth_first_searh(target))
+        # print(dictionary)
+        # print(depth_first_searh(target))
         return depth_first_searh(target)
 
 
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     nums = [1, 2, 3, 4, 5, 6]
     target = Solution().combinationSum4(nums, 4)
 
-    print(Solution.combinationSum4(0, nums, 5))
+    #print(Solution.combinationSum4(0, nums, 5))
     print(Solution.findPairs(nums, 9))
 
 

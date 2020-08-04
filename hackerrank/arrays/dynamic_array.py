@@ -6,6 +6,7 @@ import random
 import re
 import sys
 
+
 #
 # Complete the 'dynamicArray' function below.
 #
@@ -23,7 +24,7 @@ def dynamicArray(n, queries):
 
     for q in queries:
         index = (q[1] ^ last_ans) % n
-        
+
         if q[0] == 1:
             seq[index].append(q[2])
         else:
@@ -31,6 +32,7 @@ def dynamicArray(n, queries):
             last_ans = seq[index][position]
             res.append(last_ans)
     return res
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

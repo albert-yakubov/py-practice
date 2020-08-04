@@ -52,5 +52,5 @@ def intToRoman(self, num: int) -> str:
     exponents = [(len_num - exp, int(num_val)) for exp, num_val in enumerate(num_str)]
     rom_list = [the_roman_map[exp][number] for (exp, number) in exponents]
     return ''.join(rom_list)
-print(intToRoman(0, 3))
+print(intToRoman(0, 324))
 
