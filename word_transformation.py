@@ -40,6 +40,7 @@ def preprocessor(start_word, end_word, word_list) -> Dict[str, str]:
     out_map = defaultdict(list)
     word_len = len(start_word)
     for words in range(word_len):
+
         intermidiate_string = f"{start_word[:words]}*{start_word[words + 1]}"
         out_map[intermidiate_string].append(start_word)
     for words in range(word_len):
