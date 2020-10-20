@@ -37,8 +37,8 @@ if __name__ == "__main__":
     nums = [1, 2, 3, 4, 5, 6]
     target = Solution().combinationSum4(nums, 4)
 
-    #print(Solution.combinationSum4(0, nums, 5))
-    print(Solution.findPairs(nums, 9))
+    print(Solution.combinationSum4(0, nums, 5))
+    #print(Solution.combinationSum4(0, nums, 9))
 
 
 
